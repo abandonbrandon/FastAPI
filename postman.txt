@@ -1,0 +1,18 @@
+Enivornments can be used, where you can then
+    https://127.0.0.1:8000 -> {{URL}}
+
+If application uses OAuth2PasswordRequestForm, Body can not be raw, must be form-data
+Headers
+    - KEY: Token
+    - VALUE: Bearer [asdlaksdalsd]
+        Need to include "Bearer" word 
+
+Tests
+    - allows setting environment variables like access token, so automatically
+    - In Login: 
+        pm.environment.set("JWT", pm.response.json().access_token);
+    - In Create Post:
+        - Auth, dropdown is Bearer Token
+        - set to {{JWT}} as assigned above
+
+

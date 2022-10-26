@@ -1,0 +1,14 @@
+1. user
+    a. create_user
+    b. get_user
+
+2. auth
+    a. login
+
+3. post
+    a. get_posts
+        - all posts
+    b. create_posts
+    c. get_posts(int)
+    d. delete_post(int)
+    e. update_post(id)

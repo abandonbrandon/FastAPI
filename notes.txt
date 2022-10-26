@@ -1,0 +1,60 @@
+finished at: 9:17:00
+
+
+create virtual environment
+    > py -3 -m -venv venv
+
+start up the virtual environment
+    > venv\Scripts\activate.bat
+    > d:/Projects/Python/FastAPI/venv/Scripts/Activate.ps1    
+        - this is what worked personally
+        - .\venv\Scripts\Activate.ps1  
+
+fastapi course: https://www.youtube.com/watch?v=0sOvCWFmrtA&list=WL
+    uvicorn main:app --reload
+    
+**To Start**
+    1. d:/Projects/Python/FastAPI/venv/Scripts/Activate.ps1
+    (changed to below) 2. uvicorn main:app --reload
+	
+	* Start postgres service
+	* uvicorn app.main:app --reload
+
+to create a python package:
+    create app folder
+        create __init__.py file
+
+python package that allows for connecting to postgres database
+    import psycopg2
+    from psycopg2.extras import RealDictCursor
+
+SQL Alchemy (python ORM for SQL)
+    db: Session = Depends(get_db)
+
+    this is the EntityFramework of Python/postgres
+
+OAuth2
+    > pip install passlib[bcrypt]
+
+JWT Token Authentication
+    on client-side, keeps track of if user is logged in
+
+OAuth2PasswordRequestForm
+    fastapi.security.oauth2 
+    this makes it so you need to use formdata in postman instead of just raw
+
+On login, create JWT token and send back to client
+    client will then need to send to API enpoint with token
+    In Postman, Headers
+        Key: Authorization
+        Value: Bearer(space)[token]
+
+schemas can return pydantic model (like classes)
+    models.py -> Post
+        sqlalchemy.orm import relationship
+        owner = relationship("User")
+
+
+
+
+

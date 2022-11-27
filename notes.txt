@@ -18,7 +18,7 @@ fastapi course: https://www.youtube.com/watch?v=0sOvCWFmrtA&list=WL
     (changed to below) 2. uvicorn main:app --reload
 	
 	* Start postgres service
-	* uvicorn app.main:app --reload
+	********** uvicorn app.main:app --reload ***********
 
 to create a python package:
     create app folder
